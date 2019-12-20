@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>APi Demo</title>
+
+	
+</head>
+<body>
+
+	<button onclick="api_call()">submit</button>
+
+	<button onclick="newtype()"> New Type </button>
+
+		<script >
+
+		// Create a request variable and assign a new XMLHttpRequest object to it.
+function api_call(){
+	//document.write("asda");
+		
+		fetch(`http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=54315abe59ac068a50e3312bc06abeda`)
+		.then(res => res.json())
+		.then(res => {
+			console.log(res);
+			var strDataJson = JSON.stringify(res);
+			document.write(strDataJson);
+		})
+
+
+}
+			//var request = new XMLHttpRequest();
+		// request.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=54315abe59ac068a50e3312bc06abeda', true);
+
+		// request.send();
+		// //document.write(request.readyState);
+		// console.log(request);
+		// // request.onreadystatechange = function() {
+	 // //    if (this.readyState == 4 && this.status == 200) {
+	 // //      //document.write("abcd");
+	 // //    }
+	 // //  };
+
+		// request.onload = function () {
+		// 	//document.write("abcd");
+ 	// 	// Begin accessing JSON data here
+ 	// 	var data = JSON.parse(this.response);
+ 	// 	//document.write(data);
+ 	// 	var myJSON = JSON.stringify(data);
+ 		//document.write(myJSON);
+ 		//document.write(myJSON);
+// }
+//}
+	function newType(){
+
+		let appid= '54315abe59ac068a50e3312bc06abeda';
+		let unit= 'metrics';
+		//let search method;
+	}
+
+	</script>
+	</form>
+</body>
+</html>
